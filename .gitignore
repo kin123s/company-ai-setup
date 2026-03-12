@@ -1,0 +1,30 @@
+# === OS Generated Files ===
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# === IDE / Editor ===
+*.swp
+*.swo
+*~
+
+# === Environment & Secrets ===
+.env
+.env.*
+!.env.example
+
+# === Node.js ===
+node_modules/
+dist/
+out/
+*.tgz
+
+# === Logs ===
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# === AI Session State (auto-generated, optional tracking) ===
+# .ai/state/sessions/ 내용은 커밋하되, 임시 파일은 제외
+.ai/state/sessions/*.tmp
+.ai/state/sessions/*.bak
