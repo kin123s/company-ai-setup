@@ -1,0 +1,36 @@
+{
+  // --- 기존 설정 ---
+  "files.autoSave": "afterDelay",
+  "workbench.editor.enablePreview": false,
+  "explorer.autoReveal": false,
+
+  // --- 에디터 편의성 & 포매팅 ---
+  "editor.formatOnSave": true, // (필수) 저장 시 자동으로 코드 정렬 (Prettier 등 포매터와 찰떡)
+  "editor.guides.bracketPairs": true, // 괄호 쌍에 색상을 입혀줘서 React/JS의 복잡한 중첩 괄호 파악에 용이
+  "editor.wordWrap": "on", // 창 너비에 맞춰 자동 줄바꿈 (AI 프롬프트나 Jira 긴 마크다운 읽을 때 필수)
+  "editor.minimap.enabled": false, // 미니맵 끄기 (화면을 넓게 쓰고 싶을 때, 필요시 true)
+  "editor.linkedEditing": true, // HTML/JSX 태그 변경 시 닫는 태그도 자동으로 같이 변경 (React 개발 시 매우 유용)
+
+  // --- 탐색기 & 검색 최적화 ---
+  // 파일 탐색기에서는 숨기고 싶은 폴더들 (익스텐션 개발 시 빌드 결과물 등)
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/out": true // VS Code 익스텐션 빌드 폴더 숨기기
+  },
+  // 전체 검색(Ctrl+Shift+F)에서 제외할 폴더들 (검색 속도 향상)
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.ai": true, // AI 관련 캐시나 로그 폴더 검색 제외
+    "**/dist": true,
+    "**/out": true
+  },
+
+  // --- 터미널 ---
+  "terminal.integrated.cursorBlinking": true, // 터미널 커서 깜빡임 (가시성 향상)
+  "terminal.integrated.enableMultiLinePasteWarning": "never" // 여러 줄 복붙할 때 귀찮게 묻는 경고창 끄기
+}
